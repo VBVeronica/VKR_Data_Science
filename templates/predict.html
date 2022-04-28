@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Рекомендация для соотношения матрица-наполнитель</title>
+</head>
+<body>
+    <h1 style="color:#6a5acd; font-family:verdana;">Рекомендация для соотношения матрица-наполнитель</h1>
+    <form action="" method="post">
+    <fieldset>
+        <legend>Параметры для рекомендации</legend>
+    <p>
+	    <label for="mat_dens">Плотность</label>
+	    <input type="text" name="mat_dens" required>
+    </p><p>
+	    <label for="elast_mod">Модуль упругости</label>
+	    <input type="text" name="elast_mod" required>
+    </p><p>
+	    <label for="cur_agnt">Количество отвердителя</label>
+	    <input type="text" name="cur_agnt" required>
+    </p><p>
+        <label for="epox_grg">Содержание эпоксидных групп</label>
+	    <input type="text" name="epox_gr" required>
+    </p><p>
+        <label for="flash_point">Температура вспышки</label>
+	    <input type="text" name="flash_point" required>
+    </p><p>
+        <label for="surf_dens">Поверхностная плотность</label>
+	    <input type="text" name="surf_dens" required>
+    </p><p>
+        <label for="elast_mod_tens">Модуль упругости при растяжении</label>
+	    <input type="text" name="elast_mod_tens" required>
+    </p><p>
+        <label for="tensile">Прочность при растяжении</label>
+	    <input type="text" name="tensile" required>
+    </p><p>
+        <label for="resin">Потребление смолы</label>
+	    <input type="text" name="resin" required>
+    </p><p>
+        <label for="patch_angle">Угол нашивки</label>
+	    <input type="number" name="patch_angle" min='0' max='360' step='1' required>
+    </p><p>
+        <label for="patch_step">Шаг нашивки</label>
+	    <input type="text" name="patch_step" required>
+    </p><p>
+        <label for="patch_dens">Плотность нашивки</label>
+	    <input type="text" name="patch_dens" required>
+	</p>
+    </fieldset>
+	<p>
+	    <input type="submit" value="Ввод">
+        <input type="reset">
+	</p>
+    </form>
+    <p>
+        {% if message %}
+            <p><b>{{message}}</b></p>
+        {% endif %}
+    </p>
+    <p>
+        <a href="{{url_for('choose_prediction_method')}}"><button>Назад</button></a>
+    </p>
+</body>
+</html>

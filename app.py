@@ -5,10 +5,10 @@ print("Версия TensorFlow:", tf.__version__)
 
 app = Flask(__name__)
 
-def nn_prediction(params):
+def prediction(params):
     model = tf.keras.models.load_model('models/nn_model')
-    y_pred = model.predict(params)
-    return y_pred
+    pred = model.predict(params)
+    return pred
 
 @app.route('/')
 def index():
