@@ -46,7 +46,7 @@ def processing():
         params = [float(i) for i in params]
 
         message = f'Рекомендуемое соотношение матрица-наполнитель: {nn_prediction(params)}'
-    return render_template('Prediction_nn.html', message=message)
+    return render_template('predict.html', message=message)
 
 
 if __name__ == '__main__':
